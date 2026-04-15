@@ -1,0 +1,31 @@
+[
+  {
+    "host": "45.33.32.156",
+    "state": "open",
+    "protocol": "tcp",
+    "port": 22,
+    "service": "tcpwrapped",
+    "product_version": "",
+    "risk_level": "Medium",
+    "risk_reason": "SSH is secure but exposed services can be targeted by brute-force attacks.",
+    "cves": []
+  },
+  {
+    "host": "45.33.32.156",
+    "state": "open",
+    "protocol": "tcp",
+    "port": 80,
+    "service": "http",
+    "product_version": "Apache httpd 2.4.7",
+    "risk_level": "High",
+    "risk_reason": "HTTP is unencrypted and can expose credentials and session data in plaintext.",
+    "cves": [
+      {
+        "cve_id": "CVE-2021-44224",
+        "description": "A crafted URI sent to httpd configured as a forward proxy (ProxyRequests on) can cause a crash (NULL pointer dereference) or, for configurations mixing forward and reverse proxy declarations, can allow for requests to be directed to a declared Unix Domain Socket endpoint (Server Side Request Forgery). This issue affects Apache HTTP Server 2.4.7 up to 2.4.51 (included).",
+        "severity": "HIGH",
+        "published": "2021-12-20T12:15:07.393"
+      }
+    ]
+  }
+]

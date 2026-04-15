@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NetScan Security Report</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #1f2937;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+    .header {
+      padding: 24px 30px;
+      background: #0f172a;
+      color: #ffffff;
+    }
+    .header h1 {
+      margin: 0 0 8px 0;
+      font-size: 26px;
+    }
+    .header p {
+      margin: 4px 0;
+      opacity: 0.92;
+    }
+    .section {
+      padding: 20px 30px;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(120px, 1fr));
+      gap: 12px;
+    }
+    .summary-card {
+      border-radius: 8px;
+      padding: 14px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .critical { background: #f8d7da; }
+    .high { background: #ffe5d0; }
+    .medium { background: #fff3cd; }
+    .low { background: #d1e7dd; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid #d1d5db;
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #e5e7eb;
+      font-weight: 600;
+    }
+    .footer {
+      padding: 16px 30px 24px;
+      color: #6b7280;
+      font-size: 13px;
+      border-top: 1px solid #e5e7eb;
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Network Security Scan Report</h1>
+      <p><strong>Target:</strong> scanme.nmap.org</p>
+      <p><strong>Generated:</strong> 2026-04-15 11:52:17</p>
+    </div>
+
+    <div class="section">
+      <h2>Risk Summary</h2>
+      <div class="summary-grid">
+        <div class="summary-card critical">Critical: 0</div>
+        <div class="summary-card high">High: 1</div>
+        <div class="summary-card medium">Medium: 1</div>
+        <div class="summary-card low">Low: 0</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Detailed Findings</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Host</th>
+            <th>Port</th>
+            <th>Protocol</th>
+            <th>Service</th>
+            <th>Product/Version</th>
+            <th>Risk Level</th>
+            <th>Risk Reason</th>
+            <th>CVE IDs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style='background-color: #fff3cd;'><td>45.33.32.156</td><td>22</td><td>tcp</td><td>tcpwrapped</td><td></td><td><strong>Medium</strong></td><td>SSH is secure but exposed services can be targeted by brute-force attacks.</td><td>-</td></tr><tr style='background-color: #ffe5d0;'><td>45.33.32.156</td><td>80</td><td>tcp</td><td>http</td><td>Apache httpd 2.4.7</td><td><strong>High</strong></td><td>HTTP is unencrypted and can expose credentials and session data in plaintext.</td><td>-</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer">
+      Disclaimer: This tool is intended for defensive security testing on authorized systems only.
+      Unauthorized scanning may violate policy and law.
+    </div>
+  </div>
+</body>
+</html>

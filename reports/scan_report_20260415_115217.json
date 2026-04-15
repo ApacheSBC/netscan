@@ -1,0 +1,22 @@
+[
+  {
+    "host": "45.33.32.156",
+    "state": "open",
+    "protocol": "tcp",
+    "port": 22,
+    "service": "tcpwrapped",
+    "product_version": "",
+    "risk_level": "Medium",
+    "risk_reason": "SSH is secure but exposed services can be targeted by brute-force attacks."
+  },
+  {
+    "host": "45.33.32.156",
+    "state": "open",
+    "protocol": "tcp",
+    "port": 80,
+    "service": "http",
+    "product_version": "Apache httpd 2.4.7",
+    "risk_level": "High",
+    "risk_reason": "HTTP is unencrypted and can expose credentials and session data in plaintext."
+  }
+]
