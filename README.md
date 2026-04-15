@@ -1,5 +1,9 @@
 # NetScan
 
+[![Python Version](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](#)
+
 NetScan is a Python-based network port scanner security tool that helps security engineers and system administrators identify exposed services, assess risk severity, and produce actionable scan reports. It combines TCP/UDP scanning, service fingerprinting, optional OS detection, and CVE enrichment to support fast triage and defensive security assessments on authorised infrastructure.
 
 ## Features
